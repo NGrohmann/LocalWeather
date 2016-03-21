@@ -12,8 +12,93 @@
     tools:context="de.grohmann.nico.localweather.MainActivity"
     tools:showIn="@layout/activity_main">
 
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:text="Aktuelle Stadt"
+        android:id="@+id/currentCityTextView"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold"
+        android:textColor="#19cf3d"
+        android:textSize="@dimen/abc_text_size_display_2_material" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Aktuelle Stadt"
+        android:id="@+id/currentCity"
+        android:textColor="#0f0101"
+        android:textSize="@dimen/design_navigation_icon_size"
+        android:layout_below="@+id/currentCityTextView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="33dp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/myLocationImage"
+        android:src="@android:drawable/ic_menu_mylocation"
+        android:layout_alignTop="@+id/currentCity"
+        android:layout_toStartOf="@+id/currentCity" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@+id/myLocationImage" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Wetterdaten"
+        android:id="@+id/weatherDataView"
+        android:textStyle="bold"
+        android:textColor="#19cf3d"
+        android:textSize="@dimen/abc_text_size_display_2_material"
+        android:layout_below="@+id/myLocationImage"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="33dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Temperatur"
+        android:id="@+id/temperatureView"
+        android:layout_above="@+id/humidityView"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Feuchtigkeit"
+        android:id="@+id/humidityView"
+        android:layout_marginTop="43dp"
+        android:layout_below="@+id/imageView"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Wind"
+        android:id="@+id/windView"
+        android:layout_marginTop="46dp"
+        android:layout_below="@+id/humidityView"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Regen"
+        android:id="@+id/rainView"
+        android:layout_marginTop="38dp"
+        android:layout_below="@+id/windView"
+        android:layout_alignParentStart="true" />
+
 </RelativeLayout>

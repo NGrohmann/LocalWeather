@@ -1,4 +1,4 @@
 <resources>
-    <string name="app_name">LocalWeather</string>
+    <string name="app_name">Local Weather App</string>
     <string name="action_settings">Settings</string>
 </resources>
