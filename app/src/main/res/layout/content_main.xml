@@ -16,7 +16,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Aktuelle Stadt"
+        android:text="@string/current_city"
         android:id="@+id/currentCityTextView"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
@@ -27,7 +27,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Aktuelle Stadt"
+        android:text="@string/current_city"
         android:id="@+id/currentCity"
         android:textColor="#0f0101"
         android:textSize="@dimen/design_navigation_icon_size"
@@ -53,31 +53,21 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Wetterdaten"
+        android:text="@string/weatherdata"
         android:id="@+id/weatherDataView"
         android:textStyle="bold"
         android:textColor="#19cf3d"
         android:textSize="@dimen/abc_text_size_display_2_material"
         android:layout_below="@+id/myLocationImage"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="33dp" />
+        android:layout_marginTop="33dp"
+        android:layout_alignStart="@+id/myLocationImage" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Temperatur"
+        android:text="@string/temperature"
         android:id="@+id/temperatureView"
-        android:layout_above="@+id/humidityView"
-        android:layout_alignParentStart="true" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Feuchtigkeit"
-        android:id="@+id/humidityView"
-        android:layout_marginTop="43dp"
         android:layout_below="@+id/imageView"
         android:layout_alignParentStart="true" />
 
@@ -85,9 +75,19 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Wind"
+        android:text="@string/humidity"
+        android:id="@+id/humidityView"
+        android:layout_marginTop="44dp"
+        android:layout_below="@+id/temperatureView"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/wind"
         android:id="@+id/windView"
-        android:layout_marginTop="46dp"
+        android:layout_marginTop="38dp"
         android:layout_below="@+id/humidityView"
         android:layout_alignParentStart="true" />
 
@@ -95,10 +95,55 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Regen"
+        android:text="@string/rain"
         android:id="@+id/rainView"
-        android:layout_marginTop="38dp"
+        android:layout_marginTop="33dp"
         android:layout_below="@+id/windView"
         android:layout_alignParentStart="true" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView2"
+        android:src="@drawable/wetter_symbol"
+        android:layout_alignBottom="@+id/weatherDataView"
+        android:layout_alignTop="@+id/weatherDataView"
+        android:layout_toStartOf="@+id/weatherDataView" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/temperature"
+        android:id="@+id/temperatureValue"
+        android:layout_alignTop="@+id/imageView"
+        android:layout_alignEnd="@+id/currentCity" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/humidity"
+        android:id="@+id/humidityValue"
+        android:layout_above="@+id/windView"
+        android:layout_alignStart="@+id/temperatureValue" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/wind"
+        android:id="@+id/windValue"
+        android:layout_above="@+id/rainView"
+        android:layout_alignStart="@+id/humidityValue" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/rain"
+        android:id="@+id/rainValue"
+        android:layout_alignTop="@+id/rainView"
+        android:layout_alignStart="@+id/windValue" />
 
 </RelativeLayout>

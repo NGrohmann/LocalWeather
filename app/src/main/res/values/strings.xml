@@ -1,4 +1,10 @@
 <resources>
     <string name="app_name">Local Weather App</string>
     <string name="action_settings">Settings</string>
+    <string name="current_city">Aktuelle Stadt</string>
+    <string name="weatherdata">Wetterdaten</string>
+    <string name="temperature">Temperatur</string>
+    <string name="humidity">Feuchtigkeit</string>
+    <string name="wind">Wind</string>
+    <string name="rain">Regen</string>
 </resources>
