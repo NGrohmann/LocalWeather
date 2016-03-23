@@ -29,19 +29,22 @@
         android:layout_height="wrap_content"
         android:text="@string/current_city"
         android:id="@+id/currentCity"
-        android:textColor="#0f0101"
+        android:textColor="#720a0a"
         android:textSize="@dimen/design_navigation_icon_size"
         android:layout_below="@+id/currentCityTextView"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="33dp" />
+        android:layout_marginTop="33dp"
+        android:background="#dde816" />
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/myLocationImage"
-        android:src="@android:drawable/ic_menu_mylocation"
+        android:src="@drawable/arrow"
         android:layout_alignTop="@+id/currentCity"
-        android:layout_toStartOf="@+id/currentCity" />
+        android:layout_alignBottom="@+id/currentCity"
+        android:layout_alignEnd="@+id/temperatureView"
+        android:layout_toEndOf="@+id/pressureView" />
 
     <ImageView
         android:layout_width="wrap_content"
@@ -60,7 +63,7 @@
         android:textSize="@dimen/abc_text_size_display_2_material"
         android:layout_below="@+id/myLocationImage"
         android:layout_marginTop="33dp"
-        android:layout_alignStart="@+id/myLocationImage" />
+        android:layout_toEndOf="@+id/myLocationImage" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -95,8 +98,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="@string/rain"
-        android:id="@+id/rainView"
+        android:text="@string/pressure"
+        android:id="@+id/pressureView"
         android:layout_marginTop="33dp"
         android:layout_below="@+id/windView"
         android:layout_alignParentStart="true" />
@@ -117,7 +120,9 @@
         android:text="@string/temperature"
         android:id="@+id/temperatureValue"
         android:layout_alignTop="@+id/imageView"
-        android:layout_alignEnd="@+id/currentCity" />
+        android:layout_alignEnd="@+id/currentCity"
+        android:background="#d7d1d1"
+        android:textColor="#f00b0b" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -126,7 +131,9 @@
         android:text="@string/humidity"
         android:id="@+id/humidityValue"
         android:layout_above="@+id/windView"
-        android:layout_alignStart="@+id/temperatureValue" />
+        android:layout_alignStart="@+id/temperatureValue"
+        android:background="#d7d1d1"
+        android:textColor="#f00b0b" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -134,16 +141,26 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="@string/wind"
         android:id="@+id/windValue"
-        android:layout_above="@+id/rainView"
-        android:layout_alignStart="@+id/humidityValue" />
+        android:layout_above="@+id/pressureView"
+        android:layout_alignStart="@+id/humidityValue"
+        android:background="#d7d1d1"
+        android:textColor="#f00b0b" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="@string/rain"
-        android:id="@+id/rainValue"
-        android:layout_alignTop="@+id/rainView"
-        android:layout_alignStart="@+id/windValue" />
+        android:text="@string/pressure"
+        android:id="@+id/pressureValue"
+        android:layout_alignTop="@+id/pressureView"
+        android:layout_alignStart="@+id/windValue"
+        android:background="#d7d1d1"
+        android:textColor="#f00b0b" />
+
+    <Space
+        android:layout_width="20px"
+        android:layout_height="20px"
+        android:layout_below="@+id/weatherDataView"
+        android:layout_alignStart="@+id/currentCityTextView" />
 
 </RelativeLayout>
